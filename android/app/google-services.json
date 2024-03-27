@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "938215011602",
+    "project_id": "fir-project-d4e6b",
+    "storage_bucket": "fir-project-d4e6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938215011602:android:8c9710ce2ea004b3bbefcb",
+        "android_client_info": {
+          "package_name": "com.example.firebase_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938215011602-bf2ur39ntedu28dbekrt0e4i1h8eott2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzn5XLbsr4Kxw8fmBFTHgACwShJFksekY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938215011602-bf2ur39ntedu28dbekrt0e4i1h8eott2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938215011602-738evdhpm1gsj98m5hf0m58kuob297qn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseProject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938215011602:android:4ed2bf74a8f07ef7bbefcb",
+        "android_client_info": {
+          "package_name": "com.example.planet_phone_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938215011602-66ik6kvnpg5a1p7h13k0srmm5hbp6b94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.planet_phone_admin",
+            "certificate_hash": "553e0b6633f594cf55679d50a3564a28053a0a45"
+          }
+        },
+        {
+          "client_id": "938215011602-bf2ur39ntedu28dbekrt0e4i1h8eott2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzn5XLbsr4Kxw8fmBFTHgACwShJFksekY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938215011602-bf2ur39ntedu28dbekrt0e4i1h8eott2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938215011602-738evdhpm1gsj98m5hf0m58kuob297qn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseProject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938215011602:android:664266880000ff3bbbefcb",
+        "android_client_info": {
+          "package_name": "uz.mobilepro.coder.planet_phone_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938215011602-bf2ur39ntedu28dbekrt0e4i1h8eott2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzn5XLbsr4Kxw8fmBFTHgACwShJFksekY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938215011602-bf2ur39ntedu28dbekrt0e4i1h8eott2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938215011602-738evdhpm1gsj98m5hf0m58kuob297qn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
