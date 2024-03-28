@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDzn5XLbsr4Kxw8fmBFTHgACwShJFksekY',
-    appId: '1:938215011602:android:4ed2bf74a8f07ef7bbefcb',
-    messagingSenderId: '938215011602',
-    projectId: 'fir-project-d4e6b',
-    storageBucket: 'fir-project-d4e6b.appspot.com',
+    apiKey: 'AIzaSyDxrAfAH_yL9n1-mOcoiSFCF3wnP9VqI2g',
+    appId: '1:243314501698:android:e01c76e5575a978ed425db',
+    messagingSenderId: '243314501698',
+    projectId: 'planet-phone-market',
+    storageBucket: 'planet-phone-market.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC7CH_BP-69C9ab7Pvygt88Ycd_pAQfiE4',
-    appId: '1:938215011602:ios:8730d944c8afb11fbbefcb',
-    messagingSenderId: '938215011602',
-    projectId: 'fir-project-d4e6b',
-    storageBucket: 'fir-project-d4e6b.appspot.com',
-    iosBundleId: 'com.example.planetPhoneAdmin',
+    apiKey: 'AIzaSyAeA8sZopWzh8GkJA-56inzY1yMilGTOX0',
+    appId: '1:243314501698:ios:b9c188aa66c04936d425db',
+    messagingSenderId: '243314501698',
+    projectId: 'planet-phone-market',
+    storageBucket: 'planet-phone-market.appspot.com',
+    iosBundleId: 'uz.mobilepro.coder.planetPhoneDashboard',
   );
 }

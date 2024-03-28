@@ -19,20 +19,18 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final TextEditingController usernameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
-  final TextEditingController firstNameController = TextEditingController();
-  final TextEditingController lastNameController = TextEditingController();
 
   @override
   void dispose() {
+    usernameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     confirmPasswordController.dispose();
-    firstNameController.dispose();
-    lastNameController.dispose();
     super.dispose();
   }
 
@@ -53,15 +51,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: AppTextStyles.sfProRoundedSemiBold),
               16.getH(),
               GlobalTextField(
-                title: 'First Name',
+                title: 'Username',
                 iconPath: AppImages.profile,
-                controller: firstNameController,
-              ),
-              7.getH(),
-              GlobalTextField(
-                title: 'Last Name',
-                iconPath: AppImages.profile,
-                controller: lastNameController,
+                controller: usernameController,
               ),
               7.getH(),
               GlobalTextField(
@@ -93,8 +85,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             context,
                             email: emailController.text,
                             password: passwordController.text,
-                            username:
-                                '${firstNameController.text} ${lastNameController.text}',
+                            username: usernameController.text,
                           );
                     } else {
                       showSnackbar(

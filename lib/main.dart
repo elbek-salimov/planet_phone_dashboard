@@ -5,6 +5,7 @@ import 'package:planet_phone_dashboard/screens/routes.dart';
 import 'package:planet_phone_dashboard/services/local_notification_services.dart';
 import 'package:planet_phone_dashboard/view_models/auth_view_model.dart';
 import 'package:planet_phone_dashboard/view_models/category_view_model.dart';
+import 'package:planet_phone_dashboard/view_models/image_view_model.dart';
 import 'package:planet_phone_dashboard/view_models/notification_view_model.dart';
 import 'package:planet_phone_dashboard/view_models/product_view_model.dart';
 import 'package:planet_phone_dashboard/view_models/tab_view_model.dart';
@@ -36,6 +37,7 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (_) => CategoriesViewModel()),
         ChangeNotifierProvider(create: (_) => ProductViewModel()),
         ChangeNotifierProvider(create: (_) => NotificationViewModel()),
+        ChangeNotifierProvider(create: (_) => ImageViewModel()),
       ],
       child: MyApp(),
     ),

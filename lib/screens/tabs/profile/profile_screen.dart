@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:planet_phone_dashboard/utils/images/app_images.dart';
 import 'package:provider/provider.dart';
 
 import '../../../utils/colors/app_colors.dart';
@@ -45,9 +47,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 backgroundColor: Colors.white,
                                 radius: 40.w,
                                 child: ClipOval(
-                                  child: Image.network(
-                                    user.photoURL!,
-                                  ),
+                                  child: user.photoURL == null
+                                      ? SvgPicture.asset(AppImages.profilePhoto)
+                                      : Image.network(
+                                          user.photoURL!,
+                                        ),
                                 ),
                               ),
                             ],

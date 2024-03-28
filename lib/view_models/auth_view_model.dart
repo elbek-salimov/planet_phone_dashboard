@@ -133,7 +133,7 @@ class AuthViewModel extends ChangeNotifier {
   }
 
   updateUsername(String username) async {
-    if(AppConstants.textRegExp.hasMatch(username)){
+    if (AppConstants.textRegExp.hasMatch(username)) {
       _notify(true);
       await FirebaseAuth.instance.currentUser!.updateDisplayName(username);
       _notify(false);
@@ -141,7 +141,7 @@ class AuthViewModel extends ChangeNotifier {
   }
 
   updatePassword(String password) async {
-    if(AppConstants.passwordRegExp.hasMatch(password)){
+    if (AppConstants.passwordRegExp.hasMatch(password)) {
       _notify(true);
       await FirebaseAuth.instance.currentUser!.updatePassword(password);
       _notify(false);
@@ -149,7 +149,7 @@ class AuthViewModel extends ChangeNotifier {
   }
 
   updateEmail(String email) async {
-    if(AppConstants.emailRegExp.hasMatch(email)){
+    if (AppConstants.emailRegExp.hasMatch(email)) {
       _notify(true);
       await FirebaseAuth.instance.currentUser!.updateEmail(email);
       _notify(false);
@@ -169,13 +169,13 @@ class AuthViewModel extends ChangeNotifier {
   _addNewUserToList(UserCredential userCredential) async {
     String? fcmToken = await FirebaseMessaging.instance.getToken();
     var user =
-    await FirebaseFirestore.instance.collection(AppConstants.users).add({
+        await FirebaseFirestore.instance.collection(AppConstants.users).add({
       "user_id": userCredential.user != null ? userCredential.user!.uid : "",
       "user_name":
-      userCredential.user != null ? userCredential.user!.displayName : "",
+          userCredential.user != null ? userCredential.user!.displayName : "",
       "email": userCredential.user != null ? userCredential.user!.email : "",
       "image_url":
-      userCredential.user != null ? userCredential.user!.photoURL : "",
+          userCredential.user != null ? userCredential.user!.photoURL : "",
       "fcm_token": fcmToken ?? "",
       "user_doc_id": "",
     });
@@ -197,14 +197,12 @@ class AuthViewModel extends ChangeNotifier {
     _notify(false);
   }
 
-  Stream<List<UserDataModel>> listenNotifications() => FirebaseFirestore.instance
-      .collection(AppConstants.users)
-      .snapshots()
-      .map(
-        (event) => users = event.docs
-        .map((doc) => UserDataModel.fromJson(doc.data()))
-        .toList(),
-  );
+  Stream<List<UserDataModel>> listenNotifications() =>
+      FirebaseFirestore.instance.collection(AppConstants.users).snapshots().map(
+            (event) => users = event.docs
+                .map((doc) => UserDataModel.fromJson(doc.data()))
+                .toList(),
+          );
 
   _notify(bool v) {
     _isLoading = v;
@@ -251,5 +249,4 @@ class AuthViewModel extends ChangeNotifier {
       _notify(false);
     }
   }
-
 }

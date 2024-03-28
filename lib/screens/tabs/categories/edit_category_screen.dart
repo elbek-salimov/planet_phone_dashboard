@@ -26,8 +26,10 @@ class EditCategoryScreen extends StatefulWidget {
 }
 
 class _EditCategoryScreenState extends State<EditCategoryScreen> {
-  final TextEditingController nameController = TextEditingController();
 
+  String storagePath = '';
+
+  final TextEditingController nameController = TextEditingController();
   final TextEditingController imageController = TextEditingController();
 
   @override
@@ -92,6 +94,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             imageUrl: widget.imageAddress,
                             categoryName: nameController.text,
                             docId: widget.docId,
+                            storagePath: storagePath,
                           ),
                           context,
                         );
@@ -106,6 +109,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             imageUrl: imageController.text,
                             categoryName: widget.categoryName,
                             docId: widget.docId,
+                            storagePath: storagePath,
                           ),
                           context,
                         );

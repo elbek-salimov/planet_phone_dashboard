@@ -10,6 +10,7 @@ class AppImages {
   static String photo = 'assets/icons/photo.svg';
   static String price = 'assets/icons/price.svg';
   static String description = 'assets/icons/description.svg';
+  static String profilePhoto = 'assets/icons/profile_photo.svg';
 
   // jpg
   static String splash = 'assets/images/splash.jpg';

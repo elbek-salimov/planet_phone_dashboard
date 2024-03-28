@@ -3,6 +3,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:planet_phone_dashboard/data/models/notification_model.dart';
 import 'package:planet_phone_dashboard/screens/routes.dart';
+import 'package:planet_phone_dashboard/screens/tabs/home/permissions_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../../data/api_provider/api_provider.dart';
@@ -19,7 +20,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
@@ -86,6 +86,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, RouteNames.sendNotification);
                 },
                 child: const Text('Send Notification'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const PermissionsScreen();
+                  }));
+                },
+                child: const Text('PERMISSIONS'),
               )
             ],
           ),

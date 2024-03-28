@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:planet_phone_dashboard/utils/images/app_images.dart';
 
 import '../../../../utils/size/app_size.dart';
 import '../../../../utils/styles/app_text_styles.dart';
@@ -7,16 +9,14 @@ import '../../../../utils/styles/app_text_styles.dart';
 class ProfilePhotoView extends StatefulWidget {
   const ProfilePhotoView({super.key, required this.photoUrl});
 
-  final String photoUrl;
+  final String? photoUrl;
 
   @override
   State<ProfilePhotoView> createState() => _ProfilePhotoViewState();
 }
 
 class _ProfilePhotoViewState extends State<ProfilePhotoView> {
-
   final ImagePicker _picker = ImagePicker();
-
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,11 @@ class _ProfilePhotoViewState extends State<ProfilePhotoView> {
       CircleAvatar(
         radius: 40.w,
         child: ClipOval(
-          child: Image.network(
-            widget.photoUrl,
-          ),
+          child: widget.photoUrl == null
+              ? SvgPicture.asset(AppImages.profilePhoto)
+              : Image.network(
+                  widget.photoUrl!,
+                ),
         ),
       ),
       Positioned(
